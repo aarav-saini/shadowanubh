@@ -3,32 +3,62 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <title></title>
+        <title>SHADOW</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-
     <body>
         <div class="navbarWrap">
             <div class="navbar">
                 <div class="navLogo">SHADOW</div>
                 <div class="navLinks">
-                    <a href="#" class="navLink">Home</a>
-                    <a href="#" class="navLink">About</a>
-                    <a href="#" class="navLink">Contact</a>
+                    <button class="navLink" goto="#home">Home</button>
+                    <button class="navLink" goto="#about">About</button>
+                    <button class="navLink" goto="#contact">Contact</button>
                 </div>
             </div>
         </div>
-        <div class="heroWrapper">
-            <div class="heroBg">
-                <h1 class="t">🔥</h1>
+        <section id="home">
+            <div class="heroWrapper">
+                <div class="heroBg">
+                    <img src="static/media/fire.gif" alt="Flame">
+                </div>
+                <div class="heroContent">
+                    <h1 class="t so">SHADOW</h1>
+                </div>
             </div>
-            <div class="heroContent">
-                <h1 class="t so">SHADOW</h1>
-            </div>
-        </div>
-        <div class="about">
+        </section>
+        <section id="about">
             <div class="aboutInner">
                 <h1>About me</h1>
+                <p>
+                    Hello, my name is Shadow (alias).<br />
+                    I'm a part time programmer, 2d artist for Roblox UIs and
+                    many personal projects. I'm always learning, and currently
+                    working on my Roblox Luau scripting skills.<br />
+                </p>
+                <h2>Stack</h2>
+                <div class="stack">
+                    <img
+                        alt="Static Badge"
+                        src="https://img.shields.io/badge/Luau-black?style=flat-square&logo=luau&logoSize=auto&color=black" /><br />
+                    <img
+                        alt="Static Badge"
+                        src="https://img.shields.io/badge/HTML-black?style=flat-square&logo=html5&logoSize=auto&color=black" /><br />
+                    <img
+                        alt="Static Badge"
+                        src="https://img.shields.io/badge/CSS-black?style=flat-square&logo=CSS&logoSize=auto&color=black" /><br />
+                    <img
+                        alt="Static Badge"
+                        src="https://img.shields.io/badge/JavaScript-black?style=flat-square&logo=javascript&logoSize=auto&color=black" /><br />
+                </div>
+
+                <h2>Experience</h2>
+                <p>I've worked on multiple projects throughout my 3+ years of experience in HTML, CSS, JS and my 1.5 years on Luau.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contactInner">
+                <h1>Contact me</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -40,7 +70,10 @@
                     deserunt mollit anim id est laborum.
                 </p>
             </div>
-        </div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
