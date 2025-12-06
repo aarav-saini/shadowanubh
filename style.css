@@ -1,0 +1,139 @@
+@font-face {
+    font-family: stalinist-one;
+    src: url(static/font/StalinistOne-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: unlock;
+    src: url(static/font/Unlock-Regular.ttf) format("truetype");
+}
+
+.so {
+    font-family: stalinist-one;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+.t {
+    font-size: calc(28px + 8vw);
+}
+
+.heroWrapper {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(15px) brightness(0.5);
+}
+
+.heroBg > h1 {
+    font-size: 50vw;
+    margin: 0;
+    line-height: 1;
+    filter: hue-rotate(120deg) saturate(2);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.heroContent {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.navbarWrap {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: green 2px solid;
+    border-radius: 50px;
+    background-color: black;
+}
+
+.navLogo {
+    left: 0;
+    font-family: stalinist-one;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(12px + 1vw);
+}
+
+.navLinks {
+    right: 0;
+}
+
+.navLink {
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(12px + 0.5vw);
+    font-family: unlock;
+}
+
+.about {
+    height: 50vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.aboutInner {
+    width: 80%;
+    text-align: center;
+}
+.aboutInner > h1 {
+    font-size: calc(24px + 4vw);
+    font-family: stalinist-one;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.aboutInner > p {
+    font-size: calc(12px + 1vw);
+    line-height: 1.5;
+    margin-top: 20px;
+    font-weight: normal;
+}
