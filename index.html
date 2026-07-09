@@ -1,112 +1,37 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>SHADOW</title>
-        <link href="style.css" rel="stylesheet" type="text/css" />
-    </head>
-    <body>
-        <div class="navbarWrap">
-            <div class="navbar">
-                <div class="navLogo">SHADOW</div>
-                <div class="navLinks">
-                    <button class="navLink" goto="#home">Home</button>
-                    <button class="navLink" goto="#about">About</button>
-                    <button class="navLink" goto="#contact">Contact</button>
-                </div>
-            </div>
-        </div>
-        <section id="home">
-            <div class="heroWrapper">
-                <div class="heroBg">
-                    <img src="static/media/fire.gif" alt="Flame" />
-                </div>
-                <div class="heroContent">
-                    <h1 class="t so">SHADOW</h1>
-                </div>
-            </div>
-        </section>
-        <section id="about">
-            <div class="aboutInner">
-                <h1>About me</h1>
-                <p>
-                    Hello, my name is Shadow (alias).<br />
-                    I'm a part time programmer, 2d artist for Roblox UIs and
-                    many personal projects. I'm always learning, and currently
-                    working on my Roblox Luau scripting skills.<br />
-                </p>
-                <h2>Stack</h2>
-                <div class="stack">
-                    <img
-                        alt="Static Badge"
-                        src="https://img.shields.io/badge/Luau-black?style=flat-square&logo=luau&logoSize=auto&color=black" /><br />
-                    <img
-                        alt="Static Badge"
-                        src="https://img.shields.io/badge/HTML-black?style=flat-square&logo=html5&logoSize=auto&color=black" /><br />
-                    <img
-                        alt="Static Badge"
-                        src="https://img.shields.io/badge/CSS-black?style=flat-square&logo=CSS&logoSize=auto&color=black" /><br />
-                    <img
-                        alt="Static Badge"
-                        src="https://img.shields.io/badge/JavaScript-black?style=flat-square&logo=javascript&logoSize=auto&color=black" /><br />
-                </div>
-                <h2>Experience</h2>
-                <p>
-                    I've worked on multiple projects throughout my 3+ years of
-                    experience in HTML, CSS, JS and my 1.5 years on Luau.
-                </p>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="contactInner">
-                <h1>Contact me</h1>
-                <p>
-                    <a
-                        href="https://discord.com/users/1118933363621900440"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="tooltip"
-                        ><img
-                            alt="Static Badge"
-                            src="https://img.shields.io/badge/ShadowAnubh-black?style=flat-square&logo=discord&logoSize=auto&color=black"
-                            class="contactShield" /><span class="tooltiptext"
-                            >Click to open the user page. Incase it doesn't
-                            work, try adding shadow_anubh on discord.</span
-                        ><br
-                    /></a>
-                    <a
-                        href="https://www.roblox.com/users/4257372339/profile"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="tooltip"
-                        ><img
-                            alt="Static Badge"
-                            src="https://img.shields.io/badge/TRKShadowBlaze-black?style=flat-square&logo=roblox&logoSize=auto&color=black"
-                            class="contactShield" /><span class="tooltiptext"
-                            >Click to open the user page.</span
-                        ><br
-                    /></a>
-                    <a
-                        href="https://discord.com/users/1118933363621900440"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="tooltip"
-                        ><img
-                            alt="Static Badge"
-                            src="https://img.shields.io/badge/Email_Address-black?style=flat-square&logo=gmail&logoSize=auto&color=black"
-                            class="contactShield" /><span class="tooltiptext"
-                            >Add me on discord to contact me through
-                            email.</span
-                        ><br
-                    /></a>
-                </p>
-                <p style="text-align: center; color: gray; z-index: 3; transform: translateY(200px); padding-bottom: 15px">© Shadow 2025, All rights reserved</p>
-            </div>
-        </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow</title>
+    <link rel="stylesheet" href="/styles/shared.css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+  <body>
+    <div class="custom-cursor"></div>
+    <div id="app">
+      <div class="hero">
+        <h1 class="t mask">SHADOW</h1>
+      </div>
+      <section id="about">
+        <h1 class="t">About Me</h1>
+        <p class="split">
+          My name's Shadow (an alias, of course).<br>
+          I'm a part-time programmer, 2D artist for Roblox UIs, a roblox animator, and a full time student.<br>
+          I'm always working on honing my skills, and I love to learn new things. I'm currently working on my Roblox Luau skills.
+        </p>
+      </section>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/scripts/html2canvas.min.js" defer></script>
+    <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+    <script src="/scripts/liquidGL.js" defer></script>
+    <script src="/scripts/index.js" defer></script>
+    <script src="/scripts/shared.js" defer></script>
+  </body>
 </html>

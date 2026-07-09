@@ -1,0 +1,83 @@
+@view-transition {
+  navigation: auto;
+}
+::view-transition-group(root) {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+::view-transition-old(root) {
+  animation-name: vt-out;
+  z-index: 1;
+}
+::view-transition-new(root) {
+  animation-name: vt-in;
+  z-index: 2;
+}
+@keyframes vt-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-6vh) scale(0.94);
+    filter: blur(10px);
+  }
+}
+@keyframes vt-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8vh) scale(0.96);
+    filter: blur(10px);
+  }
+  60% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*) {
+    animation: none !important;
+  }
+}
+
+:root {
+  --accent-color: #ae00ff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+*:active > .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+::selection {
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  line-height: 1.6;
+  color: white;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+}
