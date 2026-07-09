@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.to(cursor, {
       left: cx,
       top: cy,
-      width: w - 15,
-      height: h - 15,
-      borderRadius: "25px",
+      width: w-10,
+      height: h-10,
+      borderRadius: "15px",
       duration: 0.35,
       ease: "power3.out",
     });

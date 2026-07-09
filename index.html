@@ -8,17 +8,48 @@
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
+    <svg width="0" height="0" style="position: absolute">
+      <filter id="invertAlpha">
+        <feComponentTransfer>
+          <feFuncA type="table" tableValues="1 0" />
+        </feComponentTransfer>
+      </filter>
+    </svg>
     <div class="custom-cursor"></div>
     <div id="app">
+      <div class="navbar_wrapper">
+        <div class="navbar">
+          <a href="/" class="navbar-item"><h1>SHADOW</h1></a>
+        </div>
+      </div>
       <div class="hero">
         <h1 class="t mask">SHADOW</h1>
       </div>
       <section id="about">
-        <h1 class="t">About Me</h1>
-        <p class="split">
-          My name's Shadow (an alias, of course).<br>
-          I'm a part-time programmer, 2D artist for Roblox UIs, a roblox animator, and a full time student.<br>
-          I'm always working on honing my skills, and I love to learn new things. I'm currently working on my Roblox Luau skills.
+        <div id="aboutInner">
+          <h1 class="t">About Me</h1>
+          <div class="aboutRow">
+            <div class="left">
+              <p>
+                I'm Shadow, a passionate developer, animator, designer and
+                student based out of Southern Asia.
+              </p>
+            </div>
+            <div class="right">
+              <p>
+                My work is based on creating immersive animations and
+                interactive elements for developers, while keeping it balanced
+                and performative for players.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="quote">
+        <p class="quote">
+          From ideas to their implementation. Quick, fast, clean and smooth
+          implementations.<br>
+          All in a day's work.
         </p>
       </section>
     </div>

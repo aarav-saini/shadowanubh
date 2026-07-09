@@ -1,42 +1,5 @@
-
 #app {
   min-height: 100vh;
-}
-
-.custom-cursor {
-  width: 30px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.2s ease;
-  mix-blend-mode: difference;
-}
-
-@font-face {
-  font-family: icon;
-  src: url("/static/font/material_symbols/MaterialSymbolsRounded-VariableFont_FILL,GRAD,opsz,wght.ttf");
-}
-
-@font-face {
-  font-family: anton;
-  src: url(/static/font/Anton-Regular.ttf);
-}
-
-@font-face {
-  font-family: climate_crisis;
-  src: url(/static/font/ClimateCrisis-Variable.woff2);
-}
-
-.t {
-  font-size: calc(28px + 8vh);
-  font-weight: bold;
-  font-family: climate_crisis;
 }
 
 .hero {
@@ -71,6 +34,84 @@ section {
   color: black;
 }
 
-#about > p {
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about > div > .t {
+  font-family: anton;
+  font-size: calc(16px + 5vw);
+  line-height: 0.1em;
+}
+
+p {
+  font-size: calc(10px + 1vw);
+}
+
+.navbar_wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+}
+
+.navbar {
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0px 40px;
+  border-radius: 0px 0px 25px 0px;
+  font-family: anton;
+  background-color: black;
+  color: var(--warm-white);
+}
+
+.left {
+  flex: 1;
+  justify-content: flex-start;
+}
+#aboutInner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+}
+.aboutRow {
+  display: flex;
+  padding: 55px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+  text-align: left;
+}
+
+.aboutRow > div {
+  max-width: 40%;
+}
+
+.right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+#quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.quote {
   font-size: calc(16px + 1vw);
+  max-width: 50vw;
 }

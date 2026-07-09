@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  SplitText.create(".split", {
+  SplitText.create(".quote", {
     type: "lines, words",
     mask: "lines",
     autoSplit: true,
@@ -23,13 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
         stagger: 0.05,
         ease: "none",
         scrollTrigger: {
-          trigger: "#about",
+          trigger: "#quote",
           scrub: 1,
           pin: true,
           start: "top top",
           end: "+=500",
         },
       });
+    },
+  });
+  gsap.to(".navbar", {
+    opacity: 1,
+    pointerEvents: "auto",
+    scrollTrigger: {
+      trigger: "#about",
+      scrub: 1,
+      start: "top top",
+      end: "+=500",
     },
   });
 });
