@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shadow</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
     <link rel="stylesheet" href="/styles/shared.css" />
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
@@ -19,38 +27,41 @@
     <div id="app">
       <div class="navbar_wrapper">
         <div class="navbar">
-          <a href="/" class="navbar-item"><h1>SHADOW</h1></a>
+          <a href="/" class="navbar-item"><h1>shadow.</h1></a>
         </div>
       </div>
       <div class="hero">
         <h1 class="t mask">SHADOW</h1>
       </div>
+      <div id="three-bg"></div>
       <section id="about">
-        <div id="aboutInner">
-          <h1 class="t">About Me</h1>
-          <div class="aboutRow">
-            <div class="left">
-              <p>
-                I'm Shadow, a passionate developer, animator, designer and
-                student based out of Southern Asia.
-              </p>
-            </div>
-            <div class="right">
-              <p>
-                My work is based on creating immersive animations and
-                interactive elements for developers, while keeping it balanced
-                and performative for players.
-              </p>
-            </div>
+        <div id="about_inner">
+          <div id="about_text_housing">
+            <p>
+              I'm a roblox animator and developer, based on creativity,
+              imagination and innovation.
+            </p>
           </div>
+          <div id="about_viewer"></div>
         </div>
       </section>
-      <section id="quote">
-        <p class="quote">
-          From ideas to their implementation. Quick, fast, clean and smooth
-          implementations.<br>
-          All in a day's work.
-        </p>
+      <section id="stack">
+        <div id="stack_inner">
+          <div id="stack_text_housing">
+            <p class="title">
+              Stack
+            </p>
+            <hr>
+            <p>HTML (Hyper Text Markup Language)</p>
+            <hr>
+            <p>CSS (Cascading Style Sheets)</p>
+            <hr>
+            <p>JS (JavaScript)</p>
+            <hr>
+            <p>Luau</p>
+            <hr>
+          </div>
+        </div>
       </section>
     </div>
     <script
@@ -59,10 +70,10 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="/scripts/html2canvas.min.js" defer></script>
     <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
-    <script src="/scripts/liquidGL.js" defer></script>
     <script src="/scripts/index.js" defer></script>
     <script src="/scripts/shared.js" defer></script>
+    <script type="module" src="/scripts/three-bg.js"></script>
+    <script type="module" src="/scripts/obj-viewer.js"></script>
   </body>
 </html>

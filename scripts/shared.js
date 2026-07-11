@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // --- smooth scroll, synced to GSAP's ticker ---
+  /* ===== Smooth Scroll ===== */
   const lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   });
+  window.lenis = lenis;
 
   lenis.on("scroll", ScrollTrigger.update);
 
@@ -14,12 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   gsap.ticker.lagSmoothing(0);
 
-  // --- custom cursor ---
+  /* ===== Cursor ===== */
   const cursor = document.querySelector(".custom-cursor");
   const xTo = gsap.quickTo(cursor, "left", { duration: 0.35, ease: "power3" });
   const yTo = gsap.quickTo(cursor, "top", { duration: 0.35, ease: "power3" });
   let morphedEl = null;
-  const morphPadding = 8;
+  const morphPadding = 10;
 
   document.addEventListener("mousemove", (e) => {
     if (!morphedEl) {

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
+  /* ===== Hero ===== */
   gsap.to(".t.mask", {
     scale: 50,
     scrollTrigger: {
@@ -8,30 +9,22 @@ document.addEventListener("DOMContentLoaded", () => {
       scrub: 1,
       pin: true,
       start: "top top",
-      end: "+=1000",
+      end: "+=500",
     },
   });
 
-  SplitText.create(".quote", {
-    type: "lines, words",
-    mask: "lines",
-    autoSplit: true,
-    onSplit(self) {
-      return gsap.from(self.words, {
-        y: 50,
-        autoAlpha: 0,
-        stagger: 0.05,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#quote",
-          scrub: 1,
-          pin: true,
-          start: "top top",
-          end: "+=500",
-        },
-      });
+  /* ===== Three.js Background ===== */
+  gsap.to("#three-bg", {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".hero",
+      scrub: 1,
+      start: "top top",
+      end: "+=500",
     },
   });
+
+  /* ===== Navbar ===== */
   gsap.to(".navbar", {
     opacity: 1,
     pointerEvents: "auto",
@@ -39,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: "#about",
       scrub: 1,
       start: "top top",
-      end: "+=500",
+      end: "+=100",
     },
   });
 });
